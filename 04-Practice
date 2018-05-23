@@ -6,18 +6,29 @@
   - property injection
     constructerでできないやつ、既存のコード。constructerにこだわらなくてもDIは始められる。
     
-  - Protocol
+　- Protocol
     DI使うときだいたい説明はProtocol。綺麗。安全。
     Protocol, Mock, Impl３箇所直さないといけない手間。こんなのはトレードオフですらない。余裕でペイできる。
   - Inherit
     継承使ってもいい。but 安全じゃない。つらい。
     
-- 非同期
-  - XCTestExpectation
-  waiter
-  
-- UserDefaults
-  - Repository
-  
-- 画面遷移
-  - Router
+- Practice
+  - UserDefaults
+    Repositoryパターンの説明、影響範囲をテスト内に閉じ込めよう(Mock, Stub, Spy, Fake)
+  - LoginaManager
+    ログイン、未ログインを外から制御
+  - 非同期
+    XCTestExpectation, waiter
+  - 画面遷移
+    Routerをつかって責務を分離する
+
+- XCTestの書き方
+  - setup, teardown
+    setup, tearDownの中の書く順番
+    影響を閉じ込めるためにcleanする
+  - XCTContext
+    グルーピング（ログイン、未ログインなど）
+    条件をまとめるのに便利
+    ネストが深くなり始めたら
+      1. テストを分割する
+      2. 実装を分割する
