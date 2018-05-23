@@ -1,0 +1,20 @@
+- UserDefaults
+  - Repository
+  
+- 画面遷移
+  - Router
+  
+- DI
+  - constructer injection
+    綺麗、簡単、よく出てくる
+  - setter injection
+    tableViewCellとかそれ
+  - property injection
+    constructerでできないやつ、既存のコード。constructerにこだわらなくてもDIは始められる。
+    
+  - Protocol
+    DI使うときだいたい説明はProtocol。綺麗。安全。
+    Protocol, Mock, Impl３箇所直さないといけない手間。こんなのはトレードオフですらない。余裕でペイできる。
+  - Inherit
+    継承使ってもいい。but 安全じゃない。つらい。
+    
