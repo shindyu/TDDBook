@@ -1,9 +1,3 @@
-- UserDefaults
-  - Repository
-  
-- 画面遷移
-  - Router
-  
 - DI
   - constructer injection
     綺麗、簡単、よく出てくる
@@ -18,3 +12,12 @@
   - Inherit
     継承使ってもいい。but 安全じゃない。つらい。
     
+- 非同期
+  - XCTestExpectation
+  waiter
+  
+- UserDefaults
+  - Repository
+  
+- 画面遷移
+  - Router
