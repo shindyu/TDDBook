@@ -1,0 +1,42 @@
+## 練習
+画面にテキストラベルを追加する
+```
+func test_画面にラベルが表示されること() {
+  let vc = ViewController()
+  vc.viewDidLoad()
+  
+  XCTAssertNotNil(vc.view.findLabel(text: "ラベル"))
+}
+```
+
+画面にボタンを追加する
+```
+func test_画面にボタンが表示されること() {
+  let vc = ViewController()
+  vc.viewDidLoad()
+  
+  XCTAssertNotNil(vc.view.findButton(text: "ボタン"))
+}
+```
+
+ボタンをタップするとラベルの内容が変化する
+```
+func test_ボタンをタップするとラベルの内容が変化すること() {
+  let vc = ViewController()
+  vc.viewDidLoad()
+  
+  let button = vc.view.findButton(text: "ボタン")
+  button.sendActions(for: .touchUpInside) 
+ 
+  XCTAssertNil(vc.view.findLabel(text: "ラベル"))
+  XCTAssertNotNil(vc.view.findLabel(text: "ラベル変化"))
+}
+```
+
+ボタンをタップすると非同期にラベルの内容が変化する
+```
+func test_ボタンをタップすると非同期にラベルの内容が変化すること() {
+  let
+}
+```
+
