@@ -1,8 +1,33 @@
 - view
+  - isHidden
+  - isEnabled
+  
 - label
+  - text
+  
 - button
+  - title
+  - image
+  - sendActions
+  
 - tableView
+  - dataSource
+    - numberOfSections
+      indexPathを指定して数を比較
+    - numberOfRows
+      indexPathを指定して数を比較
+    - cellForRows
+      cell is HogeCellで比較
+    
+  - delegate
+    - didSelect
+  
 - collectionView
+  - initの注意
+
 - navigationController
+  navigationItemとか
 
 - alertController
+  alertContollerはUIControlを持っていないので外からイベントを起こせない
+  どこまでテストするかを考えよう
